@@ -9,7 +9,7 @@ do
 
     if [ $(date -d "${fullExpiryDate}" +%s) -lt $(TZ=${expiryDate} date -d "now + 97 days" +%s) ]
         then
-        certbot renew --dry-run 2>/dev/null
+        certbot renew 2>/dev/null
     fi
 
 done
